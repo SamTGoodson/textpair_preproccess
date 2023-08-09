@@ -1,2 +1,2 @@
-# textpair_preproccess
-Getting texts ready for textpari 
+# Textpair Preprocess
+Getting texts ready for textpair 
