@@ -3,6 +3,8 @@ from french_lefff_lemmatizer.french_lefff_lemmatizer import FrenchLefffLemmatize
 
 def lemmatize_to_tab_separated(input_word, pos=None):
     lemmatizer = FrenchLefffLemmatizer()
+    if not input_word:
+        return ""  
     if pos is None:
         lemma = lemmatizer.lemmatize(input_word)
         return f"{input_word}\t{lemma}"
@@ -12,6 +14,7 @@ def lemmatize_to_tab_separated(input_word, pos=None):
     else:
         lemma = lemmatizer.lemmatize(input_word, pos)
         return f"{input_word}\t{lemma}"
+
 
 def lemmatize_file(input_file_path, output_file_path, pos=None):
     with open(input_file_path, 'r', encoding='utf-8') as input_file:
